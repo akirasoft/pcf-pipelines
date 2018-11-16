@@ -16,9 +16,12 @@ set -eux
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-files=$(aws --endpoint-url $S3_ENDPOINT --region $S3_REGION s3 ls "${S3_BUCKET_TERRAFORM}/")
 # making sure environment vars are set
 export
+
+files=$(aws --endpoint-url $S3_ENDPOINT --region $S3_REGION s3 ls "${S3_BUCKET_TERRAFORM}/")
+
+
 
 set +ex
 echo $files | grep terraform.tfstate
