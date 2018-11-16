@@ -34,7 +34,7 @@ variable "opsman_instance_type" {
 }
 variable "nat_instance_type" {
     description = "Instance Type for NAT instances"
-    default = "t3.medium"
+    default = "t2.medium"
 }
 variable "db_instance_type" {
     description = "Instance Type for RDS instance"
