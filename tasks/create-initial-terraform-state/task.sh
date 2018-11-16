@@ -18,7 +18,7 @@ set -eu
 
 files=$(aws --endpoint-url $S3_ENDPOINT --region $S3_REGION s3 ls "${S3_BUCKET_TERRAFORM}/")
 
-set +e
+set +ex
 echo $files | grep terraform.tfstate
 if [ "$?" -gt "0" ]; then
   echo "{\"version\": 3}" > terraform.tfstate
