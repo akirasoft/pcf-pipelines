@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -eux
+set -eu
 
 # Copyright 2017-Present Pivotal Software, Inc. All rights reserved.
 #
@@ -16,14 +16,9 @@ set -eux
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# making sure environment vars are set
-export
-
 files=$(aws --endpoint-url $S3_ENDPOINT --region $S3_REGION s3 ls "${S3_BUCKET_TERRAFORM}/")
 
-
-
-set +ex
+set +e
 echo $files | grep terraform.tfstate
 if [ "$?" -gt "0" ]; then
   echo "{\"version\": 3}" > terraform.tfstate
