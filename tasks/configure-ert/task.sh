@@ -147,14 +147,14 @@ cf_resources=$(
     --argjson internet_connected $INTERNET_CONNECTED \
     '
     {
-      "backup_restore": {"internet_connected": $internet_connected},
-      "clock_global": {"internet_connected": $internet_connected},
+      "backup_restore": {"instances": 0, "internet_connected": $internet_connected},
+      "clock_global": {"instances": 1, "internet_connected": $internet_connected},
       "cloud_controller": {"instances": 1, "internet_connected": $internet_connected},
       "cloud_controller_worker": {"instances": 1, "internet_connected": $internet_connected},
-      "credhub": {"internet_connected": $internet_connected},
+      "credhub": {"instances": 1, "internet_connected": $internet_connected},
       "diego_brain": {"instances": 1, "internet_connected": $internet_connected},
-      "diego_cell": {"instances": 3, "instance_type_id": "r5.large", "internet_connected": $internet_connected},
-      "diego_database": {"instances": 1, "instance_type_id": "t3.large", "internet_connected": $internet_connected},
+      "diego_cell": {"instances": 3, "instance_type_id": "r4.large", "internet_connected": $internet_connected},
+      "diego_database": {"instances": 1, "instance_type_id": "c4.large", "internet_connected": $internet_connected},
       "doppler": {"instances": 1, "internet_connected": $internet_connected},
       "ha_proxy": {"internet_connected": $internet_connected},
       "loggregator_trafficcontroller": {"instances": 1, "internet_connected": $internet_connected},
@@ -162,12 +162,12 @@ cf_resources=$(
       "mysql_monitor": {"instances": 0, "internet_connected": $internet_connected},
       "mysql_proxy": {"instances": 0, "internet_connected": $internet_connected},
       "nats": {"instances": 1, "internet_connected": $internet_connected},
-      "nfs_server": {"internet_connected": $internet_connected},
+      "nfs_server": {"instances": 0, "internet_connected": $internet_connected},
       "router": {"instances": 1, "internet_connected": $internet_connected},
       "syslog_adapter": {"instances": 1, "internet_connected": $internet_connected},
       "syslog_scheduler": {"instances": 1, "internet_connected": $internet_connected},
-      "tcp_router": {"internet_connected": $internet_connected},
-      "uaa": {"instances": 1, "instance_type_id": "c5.large", "internet_connected": $internet_connected}
+      "tcp_router": {"instances": 0, "internet_connected": $internet_connected},
+      "uaa": {"instances": 1, "instance_type_id": "c4.large", "internet_connected": $internet_connected}
     }
 
     |
