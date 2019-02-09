@@ -1,8 +1,7 @@
-### Planned Deprecation
-Please note that this repository will be officially deprecated soon.
-New and better tools to replace this repo are under development.
-While you are welcome to raise issues and pull requests,
-not every issue will be prioritized.
+# Deprecated
+Please note that there will not be updates made to this repository for future PAS or OM releases.
+
+2.4 is the last supported version.
 
 ### Description
 
@@ -42,20 +41,45 @@ These pipelines are found in the `install-pcf` directory, sorted by IaaS.
 
 
 **Compatibility Matrix** 
+
 | IAAS | pipelines release | OM version | ERT version |
 | :--- | --- | --- | --- |
-| vSphere | v23.5 | 2.1.x  | 2.2.x  |
-| Azure | v23.5 | 2.1.x | 2.2.x |
-| AWS | v23.5 | 2.1.x | 2.2.x |
-| GCP | v23.5 | 2.1.x  | 2.2.x  |
+| vSphere | v23.12 | 2.4.x  | 2.4.x  |
+| Azure | v23.12 | 2.4.x | 2.4.x |
+| AWS | v23.12 | 2.4.x | 2.4.x |
+| GCP | v23.12 | 2.4.x  | 2.4.x  |
 | OpenStack | v23 | 2.0.x  | 2.0.x  |
 
 | IAAS | pipelines release | OM version | ERT version |
 | :--- | --- | --- | --- |
-| vSphere | v23.3 | 2.0.x  | 2.1.x  |
-| Azure | v23.3 | 2.0.x | 2.1.x |
-| AWS | v23.3 | 2.0.x | 2.1.x |
-| GCP | v23.3 | 2.0.x  | 2.1.x  |
+| vSphere | v23.11 | 2.3.x  | 2.3.x  |
+| Azure | v23.11 | 2.3.x | 2.3.x |
+| AWS | v23.11 | 2.3.x | 2.3.x |
+| GCP | v23.11 | 2.3.x  | 2.3.x  |
+| OpenStack | v23 | 2.0.x  | 2.0.x  |
+
+| IAAS | pipelines release | OM version | ERT version |
+| :--- | --- | --- | --- |
+| vSphere | v23.8 | 2.3.x  | 2.3.x  |
+| Azure | v23.8 | 2.3.x | 2.3.x |
+| AWS | v23.8 | 2.3.x | 2.3.x |
+| GCP | v23.8 | 2.3.x  | 2.3.x  |
+| OpenStack | v23 | 2.0.x  | 2.0.x  |
+
+| IAAS | pipelines release | OM version | ERT version |
+| :--- | --- | --- | --- |
+| vSphere | v23.6 | 2.2.x  | 2.2.x  |
+| Azure | v23.6 | 2.2.x | 2.2.x |
+| AWS | v23.6 | 2.2.x | 2.2.x |
+| GCP | v23.6 | 2.2.x  | 2.2.x  |
+| OpenStack | v23 | 2.0.x  | 2.0.x  |
+
+| IAAS | pipelines release | OM version | ERT version |
+| :--- | --- | --- | --- |
+| vSphere | v23.3 | 2.1.x  | 2.1.x  |
+| Azure | v23.3 | 2.1.x | 2.1.x |
+| AWS | v23.3 | 2.1.x | 2.1.x |
+| GCP | v23.3 | 2.1.x  | 2.1.x  |
 | OpenStack | v23 | 2.0.x  | 2.0.x  |
 
 | IAAS | pipelines release | OM version | ERT version |
@@ -95,8 +119,8 @@ The upgrade-tile pipeline is compatible with the latest version of pcf-pipelines
 
 ## Prerequisites
 
-- [install a Concourse server](https://concourse-ci.org/installing.html)
-- download the [Fly CLI](https://concourse-ci.org/fly-cli.html) to interact with the Concourse server
+- [install a Concourse server](https://concourse-ci.org/install.html)
+- download the [Fly CLI](https://concourse-ci.org/fly.html) to interact with the Concourse server
 - depending on where you've installed Concourse, you may need to set up
 [additional firewall rules](FIREWALL.md "Firewall") to allow Concourse to reach
 third-party sources of pipeline dependencies
