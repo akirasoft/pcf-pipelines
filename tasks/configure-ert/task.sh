@@ -126,7 +126,7 @@ cf_network=$(
   jq -n \
     --arg iaas $pcf_iaas \
     --arg singleton_availability_zone "$pcf_az_1" \
-    --arg other_availability_zones "$pcf_az_1,$pcf_az_2,$pcf_az_3" \
+    --arg other_availability_zones "$pcf_az_1" \
     '
     {
       "network": {
